@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 4</title>
+    <style>
+        form {
+            text-align: left;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+        .option-label input[type="radio"] {
+            margin-right: 10px;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <h2>Correcto, McAllister mete un golazo! Bien, siguiente pregunta..</h2>
+    <h1>Pregunta 4</h1>
+    <p>En el cuarto partido Argentina vs Australia, ¿Cuál fue el resultado?</p>
+    <form method="post">
+        <label class="option-label">A<input type="radio" name="respuesta" value="a">Argentina 4 - 1 Australia</label><br>
+        <label class="option-label">B<input type="radio" name="respuesta" value="b">Argentina 2 - 1 Australia</label><br>
+        <label class="option-label">C<input type="radio" name="respuesta" value="c">Argentina 3 - 0 Australia</label><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

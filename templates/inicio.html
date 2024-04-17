@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - FIFA World Cup QATAR 2022</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <style>
+        #logo {
+            white-space: pre;
+        }
+        #resto-informacion {
+            display: none;
+        }      
+    </style>
+</head>
+<body>
+    <pre id="logo"></pre>
+    <div id="resto-informacion">
+        
+        <h1 id="titulo">Bienvenido a la FIFA World Cup QATAR 2022 </h1>
+        <p>¿Deseas iniciar una partida?</p>
+        <form method="post">
+            <input type="submit" name="respuesta" value="SI">
+            <input type="submit" name="respuesta" value="NO">
+        </form>
+    </div>
+    <script>      
+        const logo = `
+            *************************************************
+            *                                               *
+            *           FIFA World Cup QATAR 2022           *
+            *                                               *
+            *************************************************      
+        `;
+        const logoElement = document.getElementById('logo');
+        const restoInformacion = document.getElementById('resto-informacion');
+        let index = 0;
+
+        function escribirLogo() {
+            if (index < logo.length) {
+                logoElement.textContent += logo.charAt(index);
+                index++;
+                setTimeout(escribirLogo, 10); // Velocidad de escritura ajustada (más rápida)
+            } else {
+                restoInformacion.style.display = 'block'; // Mostrar el resto de la información
+            }
+        }
+
+        escribirLogo();
+      
+      window.onload = function () {
+          history.replaceState(null, "", location.href);
+          history.pushState(null, "", location.href);
+          window.onpopstate = function () {
+              if (location.href === document.referrer) {
+                  history.go(-1);
+              }
+          };
+      };
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Pregunta 2</title>
+    <style>
+        form {
+            text-align: left;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+        .option-label input[type="radio"] {
+            margin-right: 10px;
+            align-self: flex-start;
+        }
+    </style>
+    <script>
+      window.onload = function () {
+          history.replaceState(null, "", location.href);
+          history.pushState(null, "", location.href);
+          window.onpopstate = function () {
+              if (location.href === document.referrer) {
+                  history.go(-1);
+              }
+          };
+      };
+    </script>
+</head>
+<body>
+    <h2>Ese día la selección Argentina perdía un invicto de 36 partidos, es correcto! Bien, siguiente pregunta..</h2>
+    <h1>Pregunta 2</h1>
+    <p>En el segundo partido Argentina vs México, ¿Cuál fue el resultado?</p>
+    <form method="post">
+        <label class="option-label">A<input type="radio" name="respuesta" value="a">Argentina 1 - 1 México</label><br>
+        <label class="option-label">B<input type="radio" name="respuesta" value="b">Argentina 2 - 0 México</label><br>
+        <label class="option-label">C<input type="radio" name="respuesta" value="c">Argentina 2 - 1 México</label><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
