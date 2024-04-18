@@ -24,15 +24,12 @@
         }
     </style>
     <script>
-      window.onload = function () {
-          history.replaceState(null, "", location.href);
-          history.pushState(null, "", location.href);
-          window.onpopstate = function () {
-              if (location.href === document.referrer) {
-                  history.go(-1);
-              }
-          };
+      // Deshabilitar el botón de retroceso y adelanto del navegador
+      history.pushState(null, null, location.href);
+      window.onpopstate = function () {
+          history.go(1);
       };
+      window.history.forward(1);
     </script>
 </head>
 <body>

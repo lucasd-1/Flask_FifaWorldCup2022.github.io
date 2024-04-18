@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fin - FIFA World Cup QATAR 2022</title>
+    <title>Perdiste - FIFA World Cup QATAR 2022</title>
 </head>
 <body>
-    <h1>Innnnnnnnnnnnnnnncorrecto! Gracias por participar en la FIFA World Cup QATAR 2022</h1>
+    <h1>Fue una desilusión, no te acordas? Innnnnnnnnnnnnnnncorrecto! Gracias por participar en la FIFA World Cup QATAR 2022</h1>
+  <p>¿Deseas iniciar una nueva partida?</p>
+  <form method="post">
+      <input type="submit" name="respuesta" value="SI">
+      <input type="submit" name="respuesta" value="NO">
+  </form>
+  <script>
+  // Deshabilitar el botón de retroceso y adelanto del navegador
+  history.pushState(null, null, location.href);
+  window.onpopstate = function () {
+      history.go(1);
+  };
+  window.history.forward(1);
+  </script>
 </body>
 </html>

@@ -29,11 +29,11 @@
     </div>
     <script>      
         const logo = `
-            *************************************************
-            *                                               *
-            *           FIFA World Cup QATAR 2022           *
-            *                                               *
-            *************************************************      
+        *************************************************
+        *                                               *
+        *           FIFA World Cup QATAR 2022           *
+        *                                               *
+        *************************************************      
         `;
         const logoElement = document.getElementById('logo');
         const restoInformacion = document.getElementById('resto-informacion');
@@ -60,6 +60,12 @@
               }
           };
       };
+      // Deshabilitar el botón de retroceso y adelanto del navegador
+      history.pushState(null, null, location.href);
+      window.onpopstate = function () {
+          history.go(1);
+      };
+      window.history.forward(1);
     </script>
 </body>
 </html>
